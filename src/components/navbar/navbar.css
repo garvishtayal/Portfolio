@@ -1,0 +1,87 @@
+/* Navbar styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.61);
+  padding: 20px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  left: 0;
+  right: 0;
+}
+
+.navbar-brand {
+  flex: 1;
+}
+
+.name {
+  font-size: 24px;
+  color: rgba(255, 255, 255, 0.856);
+}
+
+.navbar-toggle {
+  cursor: pointer;
+}
+
+.toggle-icon {
+  display: block;
+  width: 30px;
+  height: 3px;
+  background-color: white;
+  margin: 6px 0;
+  transition: transform 0.3s ease-in-out;
+  display: none;
+}
+
+.open .toggle-icon {
+  transform: rotate(45deg);
+}
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+}
+.navbar-links div.active {
+  color: #f57c00;
+}
+.navbar-links div{
+  padding: 10px;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.863);
+  transition: color 0.3s ease-in-out;
+}
+
+
+.navbar-links div:hover{
+  color: #f57c00;
+  cursor: pointer;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+  }
+
+  .navbar-toggle, .toggle-icon {
+    display: block;
+  }
+
+  .navbar-links {
+    display: none;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.658);
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    transform: translateY(-100%);
+    position: absolute;
+    top: 90px; /* Adjust this value based on your design */
+    left: 0;
+  }
+
+  .open .navbar-links {
+    display: flex;
+    flex-direction: column;
+    transform: translateY(0);
+  }
+}

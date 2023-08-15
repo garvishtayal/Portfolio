@@ -1,0 +1,22 @@
+.scroll-arrow-container {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  cursor: pointer;
+  z-index: 100;
+}
+
+.scroll-arrow {
+  width: 20px;
+  height: 20px;
+  border: solid #333;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+  transition: transform 0.3s ease-in-out;
+}
+
+.scroll-arrow:hover {
+  transform: rotate(45deg) translateY(5px);
+  border-color: #ff9900; /* Change to a more appealing color */
+}
