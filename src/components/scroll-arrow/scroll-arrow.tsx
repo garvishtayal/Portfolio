@@ -1,5 +1,5 @@
 import React from 'react';
-import './scroll-arrow.css'
+import './scroll-arrow.css';
 
 interface ScrollArrowProps {
   scrollToSection: () => void;
