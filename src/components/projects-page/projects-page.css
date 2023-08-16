@@ -1,0 +1,94 @@
+.main-container {
+  height: 100vh;
+  background-image: url('/project_bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.project-container {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+.project-item {
+  background-color: black;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  margin: 20px;
+  max-width: 400px;
+  overflow: hidden;
+}
+
+.project-images {
+  position: relative;
+  overflow: hidden;
+}
+
+.project-images img {
+  width: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+}
+
+.arrow-buttons {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.arrow-button {
+  background-color: rgba(0, 0, 0, 0.568);
+  border: none;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 10px;
+  
+  transition: background-color 0.3s ease-in-out;
+}
+
+.arrow-button:hover {
+  background-color: rgb(0, 0, 0);
+}
+
+.project-details {
+  padding: 15px;
+}
+
+.project-details h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: rgba(255, 255, 255, 0.842);
+}
+
+.break {
+  white-space: pre-wrap;
+  font-size: 1rem;
+  color: #666;
+}
+
+.status {
+  font-size: 1rem;
+  color: white;
+}
+
+.project-navigation {
+  position: absolute;
+  bottom: -20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+@media screen and (max-width: 768px) {
+  .project-item {
+    max-width: 100%;
+    margin: 20px 0;
+  }
+}

@@ -1,3 +1,15 @@
 body {
   font-family: 'Poppins', Arial, sans-serif;
 }
+
+/* For Webkit Browsers (Chrome, Safari, Opera) */
+
+/* Hide Scrollbars */
+body {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+
+body::-webkit-scrollbar {
+  display: none; /* Webkit Browsers (Chrome, Safari, Opera) */
+}

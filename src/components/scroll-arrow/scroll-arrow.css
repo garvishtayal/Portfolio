@@ -10,7 +10,7 @@
 .scroll-arrow {
   width: 20px;
   height: 20px;
-  border: solid #333;
+  border: solid #575454;
   border-width: 0 2px 2px 0;
   transform: rotate(45deg);
   transition: transform 0.3s ease-in-out;
