@@ -1,5 +1,13 @@
 import { useState } from 'react';
 import './projects-page.css';
+import p11 from '/p11.png';
+import p12 from '/p12.png';
+import p21 from '/p21.png';
+import p22 from '/p22.png';
+import p23 from '/p23.png';
+import p31 from '/p31.png';
+import p32 from '/p32.png';
+
 
 function Projects() {
   const projects = [
@@ -8,21 +16,21 @@ function Projects() {
       description: `PodMate: Your Gateway to Captivating Video Podcasts and Creative Expression!
 
 Escape the Reels: Dive into the Podcasting Universe - Where Creativity Reigns!`, 
-      images: ["/p11.png", "/p12.png"],
+      images: [p11, p12],
       status: 'In Development',
     },
     {
       title: 'NotCode',
       description:
         `Notcode: Ignite Your Coding Skills! Unleash Your Potential with LeetCode-Inspired Challenges.`,
-      images: ["/p21.png","p22.png", "/p23.png"],
+      images: [p21, p22, p23],
       status: 'Completed',
     },
     {
       title: 'Twitter Clone',
       description:
         `Recreate Twitter's Essence Using Vanilla HTML and CSS. Dive into a world of design and interactivity, crafting your own Twitter-like platform from the ground up.`,
-      images: [ "/p32.png", "/p31.png"],
+      images: [ p31, p32],
       status: 'Completed',
     }
   ];
