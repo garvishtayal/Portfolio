@@ -1,14 +1,18 @@
 import { useState } from 'react';
 import './navbar.css';
 
-const Navbar = ({ activeSection }) => {
+interface NavbarProps {
+  activeSection: string;
+}
+
+const Navbar: React.FC<NavbarProps> = ({ activeSection }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
 
-  const scrollToSection = (section) => {
+  const scrollToSection = (section: string) => {
     const sectionElement = document.getElementById(section);
     if (sectionElement) {
       sectionElement.scrollIntoView({ behavior: 'smooth' });

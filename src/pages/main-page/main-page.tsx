@@ -12,10 +12,10 @@ const MainPage: React.FC = () => {
 
 
   //Logic for Activating the Appropriate Navigation text
-  const homeSectionRef = useRef(null);
-  const aboutSectionRef = useRef(null);
-  const projectsSectionRef = useRef(null);
-  const contactSectionRef = useRef(null);
+  const homeSectionRef = useRef<HTMLDivElement | null>(null);
+  const aboutSectionRef = useRef<HTMLDivElement | null>(null);
+  const projectsSectionRef = useRef<HTMLDivElement | null>(null);
+  const contactSectionRef = useRef<HTMLDivElement | null>(null);
 
   const [activeSection, setActiveSection] = useState('home');
 
@@ -24,8 +24,8 @@ const MainPage: React.FC = () => {
       if (homeSectionRef.current && aboutSectionRef.current) {
         const homeTop = homeSectionRef.current.getBoundingClientRect().top;
         const aboutTop = aboutSectionRef.current.getBoundingClientRect().top;
-        const projectsTop = projectsSectionRef.current.getBoundingClientRect().top;
-        const contactTop = contactSectionRef.current.getBoundingClientRect().top;
+        const projectsTop = projectsSectionRef.current?.getBoundingClientRect()?.top?? 0;
+        const contactTop = contactSectionRef.current?.getBoundingClientRect()?.top ?? 0;
 
         // Check which section is closer to the top of the viewport
         if (Math.abs(homeTop) < Math.abs(aboutTop)) {
@@ -56,13 +56,13 @@ const MainPage: React.FC = () => {
 
   const scrollHandler = () => {
     if (activeSection == 'home') {
-      aboutSection.current.scrollIntoView({ behavior: 'smooth' });
+      aboutSection.current!.scrollIntoView({ behavior: 'smooth' });
     }
     else if (activeSection == 'about') {
-      projectsSection.current.scrollIntoView({ behavior: 'smooth' });
+      projectsSection.current!.scrollIntoView({ behavior: 'smooth' });
     }
     else if (activeSection == 'projects') {
-      contactSection.current.scrollIntoView({ behavior: 'smooth' });
+      contactSection.current!.scrollIntoView({ behavior: 'smooth' });
     }
   };
 
