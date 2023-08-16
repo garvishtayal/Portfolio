@@ -1,4 +1,6 @@
 import './about-page.css';
+import profilePic from '/profile_1.jpg';
+
 
 function About() {
 
@@ -6,7 +8,7 @@ function About() {
     <div className='main_container' id='about-page'>
       <div className="bio-container">
       <div className="profile-img-container">
-        <img className="profile-img" src='/profile_1.jpg' />
+        <img className="profile-img" src={profilePic} />
       </div>
       <div className="bio-content">
         <h1 className="bio-name">Abhishek Tayal</h1>
