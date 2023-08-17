@@ -14,7 +14,7 @@ function About() {
         <h1 className="bio-name">Abhishek Tayal</h1>
         <p className="role">Full Stack Developer</p>
         <p className="quote">
-          "When something is good enough, you do it. No matter what the odds are."
+          "Building something doesn't require knowing everything beforehand; as you begin the journey, understanding unfolds gradually."
         </p>
       </div>
       <div className="skills">
